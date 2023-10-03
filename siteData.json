@@ -147,6 +147,14 @@
       "headingKeywords": {}
     },
     {
+      "src": "team/lawruixi.md",
+      "title": "Law Rui Xi's Project Portfolio Page",
+      "headings": {
+        "project-nusearch": "Project: NUSearch"
+      },
+      "headingKeywords": {}
+    },
+    {
       "src": "tutorials/AddRemark.md",
       "title": "Tutorial: Adding a command",
       "headings": {
