@@ -1,28 +1,24 @@
 package seedu.address.logic.commands;
 
-import static java.util.Objects.requireNonNull;
-
 import seedu.address.commons.util.ToStringBuilder;
 import seedu.address.logic.Messages;
 import seedu.address.model.Model;
-import seedu.address.model.person.NameContainsKeywordsPredicate;
+import seedu.address.model.person.CourseContainsKeywordsPredicate;
+import seedu.address.model.person.RoleContainsKeywordsPredicate;
 
-/**
- * Finds and lists all persons in address book whose name contains any of the argument keywords.
- * Keyword matching is case insensitive.
- */
-public class FindCommand extends Command {
+import static java.util.Objects.requireNonNull;
 
-    public static final String COMMAND_WORD = "search";
+public class FindRoleCommand extends Command {
+    public static final String COMMAND_WORD = "searchrole";
 
     public static final String MESSAGE_USAGE = COMMAND_WORD + ": Finds all persons whose names contain any of "
             + "the specified keywords (case-insensitive) and displays them as a list with index numbers.\n"
             + "Parameters: KEYWORD [MORE_KEYWORDS]...\n"
             + "Example: " + COMMAND_WORD + " alice bob charlie";
 
-    private final NameContainsKeywordsPredicate predicate;
+    private final RoleContainsKeywordsPredicate predicate;
 
-    public FindCommand(NameContainsKeywordsPredicate predicate) {
+    public FindRoleCommand(RoleContainsKeywordsPredicate predicate) {
         this.predicate = predicate;
     }
 
@@ -41,11 +37,11 @@ public class FindCommand extends Command {
         }
 
         // instanceof handles nulls
-        if (!(other instanceof FindCommand)) {
+        if (!(other instanceof FindRoleCommand)) {
             return false;
         }
 
-        FindCommand otherFindCommand = (FindCommand) other;
+        FindRoleCommand otherFindCommand = (FindRoleCommand) other;
         return predicate.equals(otherFindCommand.predicate);
     }
 

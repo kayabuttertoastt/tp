@@ -40,6 +40,10 @@ public class Role {
         roleType = toRoleType(roleString);
     }
 
+    public String getRoleType() {
+        return String.valueOf(roleType);
+    }
+
     /**
      * Retrieves the corresponding RoleType from the String input.
      */

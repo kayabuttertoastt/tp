@@ -32,6 +32,10 @@ public class Course {
         return test.matches(VALIDATION_REGEX);
     }
 
+    public String getCourseName() {
+        return courseName;
+    }
+
     @Override
     public boolean equals(Object other) {
         if (other == this) {
