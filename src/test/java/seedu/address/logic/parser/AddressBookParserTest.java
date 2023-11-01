@@ -1,6 +1,7 @@
 package seedu.address.logic.parser;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static seedu.address.logic.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
 import static seedu.address.logic.Messages.MESSAGE_UNKNOWN_COMMAND;
@@ -9,6 +10,7 @@ import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST_PERSON;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.junit.jupiter.api.Test;
@@ -34,6 +36,16 @@ import seedu.address.testutil.PersonUtil;
 public class AddressBookParserTest {
 
     private final AddressBookParser parser = new AddressBookParser();
+
+    @Test
+    public void getCommandWords_returnsCommandWords() {
+        Set<String> commandWordsSet = parser.getCommandWords();
+
+        assertTrue(commandWordsSet.size() > 0);
+        assertTrue(commandWordsSet.contains(ClearCommand.COMMAND_WORD));
+        assertTrue(commandWordsSet.contains(ExitCommand.COMMAND_WORD));
+        assertFalse(commandWordsSet.contains(null));
+    }
 
     @Test
     public void parseCommand_add() throws Exception {
