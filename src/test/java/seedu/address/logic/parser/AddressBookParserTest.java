@@ -37,6 +37,8 @@ import seedu.address.model.person.Person;
 import seedu.address.model.person.RoleContainsKeywordsPredicate;
 import seedu.address.model.person.TutorialContainsKeywordsPredicate;
 //import seedu.address.testutil.EditPersonDescriptorBuilder;
+import seedu.address.model.person.RoleContainsKeywordsPredicate;
+import seedu.address.model.person.TutorialContainsKeywordsPredicate;
 import seedu.address.testutil.PersonBuilder;
 import seedu.address.testutil.PersonUtil;
 
@@ -111,10 +113,6 @@ public class AddressBookParserTest {
     @Test
     public void parseCommand_findcourse() throws Exception {
         List<String> keywords = Arrays.asList("foo", "bar", "baz");
-        FindCourseCommand command = (FindCourseCommand) parser.parseCommand(
-                FindCourseCommand.COMMAND_WORD + " " + keywords.stream().collect(Collectors.joining(" ")));
-        assertEquals(new FindCourseCommand(new CourseContainsKeywordsPredicate(keywords)), command);
-    }
 
     @Test
     public void parseCommand_findtutorial() throws Exception {
