@@ -3,11 +3,10 @@ package seedu.address.logic.commands;
 import seedu.address.model.Model;
 import seedu.address.model.person.Person;
 
+import static java.util.Objects.requireNonNull;
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
-
-import static java.util.Objects.requireNonNull;
 
 /**
  * Lists all favourite persons in the address book to the user.
@@ -32,16 +31,16 @@ public class FavListCommand extends Command {
                 .map(this::formatPersonDetails)
                 .collect(Collectors.joining("\n"));
 
-        return new CommandResult("You have " + numbFavouritePeople +
-                " favourite profile" + s + " in your list.\n" + peopleList);
+        return new CommandResult("You have " + numbFavouritePeople
+                + " favourite profile" + s + " in your list.\n" + peopleList);
     }
 
     private String formatPersonDetails(Person person) {
-        return "Name: " + person.getName() + "\n" +
-                "Roles: " + person.getRoles() + "\n" +
-                "Contacts: " + person.getContacts() + "\n" +
-                "Courses: " + person.getCourses() + "\n" +
-                "Tutorials: " + person.getTutorials() + "\n";
+        return "Name: " + person.getName() + "\n"
+                + "Roles: " + person.getRoles() + "\n"
+                + "Contacts: " + person.getContacts() + "\n"
+                + "Courses: " + person.getCourses() + "\n"
+                + "Tutorials: " + person.getTutorials() + "\n";
     }
 }
 
