@@ -13,20 +13,7 @@ import java.util.regex.Pattern;
 
 import seedu.address.commons.core.LogsCenter;
 import seedu.address.commons.util.CheckedFunction;
-import seedu.address.logic.commands.AddCommand;
-import seedu.address.logic.commands.ClearCommand;
-import seedu.address.logic.commands.Command;
-import seedu.address.logic.commands.DeleteCommand;
-import seedu.address.logic.commands.EditCommand;
-import seedu.address.logic.commands.ExitCommand;
-import seedu.address.logic.commands.FavouriteCommand;
-import seedu.address.logic.commands.FindCommand;
-import seedu.address.logic.commands.FindCourseCommand;
-import seedu.address.logic.commands.FindRoleCommand;
-import seedu.address.logic.commands.FindTutorialCommand;
-import seedu.address.logic.commands.HelpCommand;
-import seedu.address.logic.commands.ListCommand;
-import seedu.address.logic.commands.UnfavouriteCommand;
+import seedu.address.logic.commands.*;
 import seedu.address.logic.parser.exceptions.ParseException;
 
 /**
@@ -65,6 +52,8 @@ public class AddressBookParser {
         wordToCommandMap.put(UnfavouriteCommand.COMMAND_WORD, (arguments) ->
                 new UnfavouriteCommandParser().parse(arguments));
 
+        wordToCommandMap.put(FavListCommand.COMMAND_WORD, (arguments) -> new FavListCommand());
+
         wordToCommandMap.put(FindCommand.COMMAND_WORD, (arguments) -> new FindCommandParser().parse(arguments));
         wordToCommandMap.put(ListCommand.COMMAND_WORD, (arguments) -> new ListCommand());
         wordToCommandMap.put(FindRoleCommand.COMMAND_WORD, (arguments) ->
@@ -78,6 +67,7 @@ public class AddressBookParser {
 
         wordToCommandMap.put(ExitCommand.COMMAND_WORD, (arguments) -> new ExitCommand());
         wordToCommandMap.put(HelpCommand.COMMAND_WORD, (arguments) -> new HelpCommand());
+
     }
 
     /**
