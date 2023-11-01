@@ -110,9 +110,13 @@ public class AddressBookParserTest {
         assertEquals(new FindRoleCommand(new RoleContainsKeywordsPredicate(keywords)), command);
     }
 
-    @Test
+   @Test
     public void parseCommand_findcourse() throws Exception {
         List<String> keywords = Arrays.asList("foo", "bar", "baz");
+        FindCourseCommand command = (FindCourseCommand) parser.parseCommand(
+                FindCourseCommand.COMMAND_WORD + " " + keywords.stream().collect(Collectors.joining(" ")));
+        assertEquals(new FindCourseCommand(new CourseContainsKeywordsPredicate(keywords)), command);
+    }
 
     @Test
     public void parseCommand_findtutorial() throws Exception {
