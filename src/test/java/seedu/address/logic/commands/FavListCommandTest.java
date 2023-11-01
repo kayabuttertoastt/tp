@@ -51,7 +51,7 @@ public class FavListCommandTest {
         CommandResult result = new FavListCommand().execute(model);
         String expectedOutput = "You have 1 favourite profile in your list.\n"
                 + "Name: " + VALID_NAME_BOB + "\n"
-                + "Roles: " + "[" + VALID_ROLE_TA +  "]" + "\n"
+                + "Roles: " + "[" + VALID_ROLE_TA + "]" + "\n"
                 + "Contacts: " + "[" + "[" + VALID_CONTACT_BOB + "]" + "]" + "\n"
                 + "Courses: " + "[" + VALID_COURSE_2.toString() + "]" + "\n"
                 + "Tutorials: " + "[" + VALID_TUTORIAL_2.toString() + "]" + "\n";;
@@ -75,7 +75,7 @@ public class FavListCommandTest {
         CommandResult result = new FavListCommand().execute(model);
         String expectedOutput = "You have 1 favourite profile in your list.\n"
                 + "Name: " + VALID_NAME_BOB + "\n"
-                + "Roles: " + "[" + VALID_ROLE_TA +  "]" + "\n"
+                + "Roles: " + "[" + VALID_ROLE_TA + "]" + "\n"
                 + "Contacts: " + "[" + "[" + VALID_CONTACT_BOB + "]" + "]" + "\n"
                 + "Courses: " + "[" + VALID_COURSE_2.toString() + "]" + "\n"
                 + "Tutorials: " + "[" + VALID_TUTORIAL_2.toString() + "]" + "\n";;
