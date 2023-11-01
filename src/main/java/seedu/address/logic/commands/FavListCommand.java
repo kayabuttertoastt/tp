@@ -13,7 +13,7 @@ import seedu.address.model.person.Person;
  * Lists all favourite persons in the address book to the user.
  */
 public class FavListCommand extends Command {
-    public static final String MESSAGE_SUCCESS = "You have 0 profile in your list\n";
+    public static final String MESSAGE_SUCCESS = "You have 0 favourite profile in your list.\n";
     public static final String COMMAND_WORD = "favlist";
     @Override
     public CommandResult execute(Model model) {

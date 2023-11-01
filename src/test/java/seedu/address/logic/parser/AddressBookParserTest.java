@@ -21,13 +21,20 @@ import seedu.address.logic.commands.DeleteCommand;
 //import seedu.address.logic.commands.EditCommand;
 //import seedu.address.logic.commands.EditCommand.EditPersonDescriptor;
 import seedu.address.logic.commands.ExitCommand;
+import seedu.address.logic.commands.FavListCommand;
 import seedu.address.logic.commands.FavouriteCommand;
 import seedu.address.logic.commands.FindCommand;
+import seedu.address.logic.commands.FindCourseCommand;
+import seedu.address.logic.commands.FindRoleCommand;
+import seedu.address.logic.commands.FindTutorialCommand;
 import seedu.address.logic.commands.HelpCommand;
 import seedu.address.logic.commands.ListCommand;
 import seedu.address.logic.commands.UnfavouriteCommand;
 import seedu.address.logic.parser.exceptions.ParseException;
 import seedu.address.model.person.NameContainsKeywordsPredicate;
+import seedu.address.model.person.RoleContainsKeywordsPredicate;
+import seedu.address.model.person.CourseContainsKeywordsPredicate;
+import seedu.address.model.person.TutorialContainsKeywordsPredicate;
 import seedu.address.model.person.Person;
 //import seedu.address.testutil.EditPersonDescriptorBuilder;
 import seedu.address.testutil.PersonBuilder;
@@ -94,6 +101,30 @@ public class AddressBookParserTest {
     }
 
     @Test
+    public void parseCommand_findrole() throws Exception {
+        List<String> keywords = Arrays.asList("foo", "bar", "baz");
+        FindRoleCommand command = (FindRoleCommand) parser.parseCommand(
+                FindRoleCommand.COMMAND_WORD + " " + keywords.stream().collect(Collectors.joining(" ")));
+        assertEquals(new FindRoleCommand(new RoleContainsKeywordsPredicate(keywords)), command);
+    }
+
+    @Test
+    public void parseCommand_findcourse() throws Exception {
+        List<String> keywords = Arrays.asList("foo", "bar", "baz");
+        FindCourseCommand command = (FindCourseCommand) parser.parseCommand(
+                FindCourseCommand.COMMAND_WORD + " " + keywords.stream().collect(Collectors.joining(" ")));
+        assertEquals(new FindCourseCommand(new CourseContainsKeywordsPredicate(keywords)), command);
+    }
+
+    @Test
+    public void parseCommand_findtutorial() throws Exception {
+        List<String> keywords = Arrays.asList("foo", "bar", "baz");
+        FindTutorialCommand command = (FindTutorialCommand) parser.parseCommand(
+                FindTutorialCommand.COMMAND_WORD + " " + keywords.stream().collect(Collectors.joining(" ")));
+        assertEquals(new FindTutorialCommand(new TutorialContainsKeywordsPredicate(keywords)), command);
+    }
+
+    @Test
     public void parseCommand_favourite() throws Exception {
         FavouriteCommand command = (FavouriteCommand) parser.parseCommand(
                 FavouriteCommand.COMMAND_WORD + " " + INDEX_FIRST_PERSON.getOneBased());
@@ -115,6 +146,12 @@ public class AddressBookParserTest {
     public void parseCommand_list() throws Exception {
         assertTrue(parser.parseCommand(ListCommand.COMMAND_WORD) instanceof ListCommand);
         assertTrue(parser.parseCommand(ListCommand.COMMAND_WORD + " 3") instanceof ListCommand);
+    }
+
+    @Test
+    public void parseCommand_favlist() throws Exception {
+        assertTrue(parser.parseCommand(FavListCommand.COMMAND_WORD) instanceof FavListCommand);
+        assertTrue(parser.parseCommand(FavListCommand.COMMAND_WORD + " 3") instanceof FavListCommand);
     }
 
     @Test
