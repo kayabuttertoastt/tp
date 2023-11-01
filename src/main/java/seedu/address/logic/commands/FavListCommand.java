@@ -1,12 +1,13 @@
 package seedu.address.logic.commands;
 
-import seedu.address.model.Model;
-import seedu.address.model.person.Person;
-
 import static java.util.Objects.requireNonNull;
+
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
+
+import seedu.address.model.Model;
+import seedu.address.model.person.Person;
 
 /**
  * Lists all favourite persons in the address book to the user.
