@@ -11,7 +11,7 @@
         "william-jacob": "William Jacob",
         "law-rui-xi": "Law Rui Xi",
         "ong-xiao-wei": "Ong Xiao Wei",
-        "james-doe": "James Doe"
+        "kirthigha-shanmuganantham": "Kirthigha Shanmuganantham"
       },
       "headingKeywords": {}
     },
@@ -51,8 +51,12 @@
         "storage-component": "Storage component",
         "common-classes": "Common classes",
         "implementation": "Implementation",
+        "favourite-feature": "Favourite feature",
         "proposed-undo-redo-feature": "[Proposed] Undo/redo feature",
         "proposed-data-archiving": "[Proposed] Data archiving",
+        "search-feature": "Search feature",
+        "add-feature": "Add Feature",
+        "proposed-favourite-list-feature": "[Proposed] Favourite List feature",
         "documentation-logging-testing-configuration-dev-ops": "Documentation, logging, testing, configuration, dev-ops",
         "appendix-requirements": "Appendix: Requirements",
         "product-scope": "Product scope",
@@ -108,13 +112,25 @@
       "title": "User Guide",
       "headings": {
         "nusearch-user-guide": "NUSearch User Guide",
-        "1-motivation": "1. Motivation",
-        "2-unique-selling-point": "2. Unique Selling Point",
-        "3-quick-start": "3. Quick start",
-        "4-features-and-amp-commands": "4. Features &amp; Commands",
-        "a-guide-to-reading-each-command": "A Guide to reading each command",
-        "how-to-interpret-a-command-format": "How to interpret a command format",
+        "motivation": "Motivation",
+        "unique-selling-point": "Unique Selling Point",
+        "quick-start": "Quick start",
         "features": "Features",
+        "a-guide-to-reading-each-feature": "A guide to reading each feature",
+        "help-page-help": "Help page: help",
+        "adding-a-person-add": "Adding a person: add",
+        "listing-all-persons-list": "Listing all persons : list",
+        "adding-profiles-to-favourites-fav": "Adding profiles to favourites: fav",
+        "removing-a-profile-from-favourite-unfav": "Removing a profile from favourite: unfav",
+        "listing-all-favourite-persons-favlist": "Listing all favourite persons : favlist",
+        "deleting-a-profile-delete": "Deleting a profile : delete",
+        "searching-for-profiles-by-name-search": "Searching for profiles by name: search",
+        "searching-for-profiles-by-course-searchcourse": "Searching for profiles by course: searchcourse",
+        "searching-for-profiles-by-rle-searchrole": "Searching for profiles by rle: searchrole",
+        "searching-for-profiles-by-rle-searchtutorial": "Searching for profiles by rle: searchtutorial",
+        "editing-a-profile-edit": "Editing a profile: edit",
+        "exiting-the-application-exit": "Exiting the application: exit",
+        "autocomplete": "Autocomplete",
         "ui-mockup": "UI Mockup",
         "faq": "FAQ",
         "known-issues": "Known issues",
@@ -147,10 +163,34 @@
       "headingKeywords": {}
     },
     {
+      "src": "team/kayabuttertoastt.md",
+      "title": "Kirthigha Shanmuganantham's Project Portfolio Page",
+      "headings": {
+        "project-nusearch": "Project: NUSearch"
+      },
+      "headingKeywords": {}
+    },
+    {
       "src": "team/lawruixi.md",
       "title": "Law Rui Xi's Project Portfolio Page",
       "headings": {
         "project-nusearch": "Project: NUSearch"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/wjacobw.md",
+      "title": "William Jacob's Project Portfolio Page",
+      "headings": {
+        "project-addressbook-to-be-added-soon": "Project: AddressBook [to be added soon]"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/xxiaoweii.md",
+      "title": "Ong Xiao Wei's Project Portfolio Page",
+      "headings": {
+        "project-addressbook-level-3": "Project: AddressBook Level 3"
       },
       "headingKeywords": {}
     },
