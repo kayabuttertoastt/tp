@@ -20,6 +20,7 @@ import seedu.address.logic.commands.ClearCommand;
 import seedu.address.logic.commands.DeleteCommand;
 import seedu.address.logic.commands.ExitCommand;
 import seedu.address.logic.commands.FavouriteCommand;
+import seedu.address.logic.commands.FavListCommand;
 import seedu.address.logic.commands.FindCommand;
 import seedu.address.logic.commands.FindTutorialCommand;
 import seedu.address.logic.commands.HelpCommand;
@@ -143,6 +144,13 @@ public class AddressBookParserTest {
         assertTrue(parser.parseCommand(ListCommand.COMMAND_WORD) instanceof ListCommand);
         assertThrows(ParseException.class, String.format(MESSAGE_INVALID_COMMAND_FORMAT,
                 ListCommand.MESSAGE_USAGE), () -> parser.parseCommand(ListCommand.COMMAND_WORD + " 3"));
+    }
+
+    @Test
+    public void parseCommand_favlist() throws Exception {
+        assertTrue(parser.parseCommand(FavListCommand.COMMAND_WORD) instanceof FavListCommand);
+        assertThrows(ParseException.class, String.format(MESSAGE_INVALID_COMMAND_FORMAT,
+                FavListCommand.MESSAGE_USAGE), () -> parser.parseCommand(FavListCommand.COMMAND_WORD + " 3"));
     }
 
     @Test

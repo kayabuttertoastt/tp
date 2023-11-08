@@ -20,9 +20,9 @@ public class FindRoleCommand extends Command {
      * Usage instructions for the 'searchrole' command.
      */
     public static final String MESSAGE_USAGE = COMMAND_WORD + ": Finds all persons whose roles contain any of "
-            + "the specified keywords (case-insensitive) and displays them as a list with index numbers.\n"
+            + "the specified keywords (case-sensitive) and displays them as a list with index numbers.\n"
             + "Parameters: KEYWORD [MORE_KEYWORDS]...\n"
-            + "Example: " + COMMAND_WORD + "TA";
+            + "Example: " + COMMAND_WORD + " TA";
 
     private final RoleContainsKeywordsPredicate predicate;
 
