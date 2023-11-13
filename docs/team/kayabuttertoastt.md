@@ -41,8 +41,6 @@ or multiple people at once based on their name, role, course or tutorial class.
 * Fixed a bug where the system outputs the wrong usage message for `searchrole`
 * Fixed a bug where `favlist` does not show an error message for adding additional fields
 
-<div style="page-break-after: always;"></div>
-
 ##### Documentation
 * User Guide:
   * For Features & Commands:
